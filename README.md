@@ -3,7 +3,7 @@ Springboot with GraphQL to query results in single Api call
 
 To Test the exposed endpoint.
 
-Use below url and request Body
+Use below url and request Body and test it via postman
 
 http://localhost:9999/rest/books
 
@@ -26,6 +26,12 @@ body:-
      publisher
      authors
   }
+}
+
+//If you want to fetch allBooks and book at a time you can use below body
+{ 
+book(id:"123"){ title }
+allBooks { isn title publisher authors } 
 }
 
 
